@@ -14,6 +14,9 @@ curl https://get.acme.sh | sh
 # Step 2: Issue a certificate for your domain
 ~/.acme.sh/acme.sh --issue --standalone -d $domain -d "www.$domain"
 
+# carete a directory for the certificate
+sudo mkdir -p "/etc/nginx/ssl/$domain"
+
 # Step 3: Install the issued certificate to your Nginx configuration
 ~/.acme.sh/acme.sh --install-cert -d $domain \
     --fullchain-file "/etc/nginx/ssl/$domain/fullchain.cer" \
