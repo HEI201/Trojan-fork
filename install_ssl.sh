@@ -8,6 +8,9 @@ fi
 
 domain=$1
 
+# stop nginx
+sudo service nginx stop
+
 # Step 1: Install acme.sh
 curl https://get.acme.sh | sh
 
@@ -23,3 +26,5 @@ sudo mkdir -p "/etc/nginx/ssl/$domain"
     --key-file "/etc/nginx/ssl/$domain/$domain.key" \
     --reloadcmd "service nginx force-reload"
 
+# start nginx
+sudo service nginx start
