@@ -13,9 +13,9 @@ if [ $# -lt 3 ]; then
     exit 1
 fi
 
-$domain=$1
-$port=$2
-$https_port=$3
+domain=$1
+port=$2
+https_port=$3
 
 # Create a new directory for your website
 sudo mkdir -p "/var/www/$domain"

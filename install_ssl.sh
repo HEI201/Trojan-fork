@@ -6,7 +6,7 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 
-$domain=$1
+domain=$1
 
 # Step 1: Install acme.sh
 curl https://get.acme.sh | sh
