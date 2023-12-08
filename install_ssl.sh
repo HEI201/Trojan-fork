@@ -24,7 +24,6 @@ sudo mkdir -p "/etc/nginx/ssl/$domain"
 ~/.acme.sh/acme.sh --install-cert -d $domain \
     --fullchain-file "/etc/nginx/ssl/$domain/fullchain.cer" \
     --key-file "/etc/nginx/ssl/$domain/$domain.key" \
-    --reloadcmd "service nginx force-reload"
 
 # start nginx
 sudo service nginx start
